@@ -1,14 +1,14 @@
 ### AWS to create an Instanse
-`sh run-instance`
+`sh run-instance.sh`
 
 ### To START Instance
-`sh start-instance <instance-id>`
+`sh start-instance.sh <instance-id>`
 
 ### To STOP Instance
-`sh stop-instance <instance-id>`
+`sh stop-instance.sh <instance-id>`
 
 ### Get Public DNS of Instance
 `sh get-dns.sh <instance-id>`
 
 ### To connect to Instance via SSH
-`sh connect-to-instance.sh <Public IPv4 DNS>`
+`sh connect-to-instance.sh <instance-id>`
