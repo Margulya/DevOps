@@ -1,0 +1,9 @@
+ENV["VAGRANT_EXPERIMENTAL"] = "disks"
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/ubuntu2204"
+  config.vm.disk :disk, size: "400MB", name: "extra_storage_2"
+  config.vm.disk :disk, size: "400MB", name: "extra_storage_1"
+  config.vm.disk :disk, size: "400MB", name: "extra_storage_3"
+  config.vm.disk :disk, size: "400MB", name: "extra_storage_4"
+  config.vm.provision "shell", path: "script.sh"
+end
