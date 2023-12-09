@@ -1,24 +1,22 @@
-### AWS to create an instanse
-```power shell
-aws ec2 run-instances --image-id ami-01bc990364452ab3e --count 1 --instance-type t2.micro --key-name DevOpsMargoKeys --security-group-ids sg-0ead2b9cb39d6b89d --subnet-id subnet-03faa756dd197c962 --user-data file://script.txt
-```
+### AWS to create an Instanse
+`sh run-instance.sh`
 
 ### To START Instance
-`aws ec2 start-instances --instance-ids i-08d4721b7a2c622b5`
+`sh start-instance.sh <instance-id>`
 
 ### To STOP Instance
-`aws ec2 stop-instances --instance-ids i-08d4721b7a2c622b5`
+`sh stop-instance.sh <instance-id>`
 
-### To connect to Instance
-`ssh -i "DevOpsMargoKeys.pem" ec2-user@ec2-34-238-44-253.compute-1.amazonaws.com`
+### To connect to Instance via SSH
+`sh connect-to-instance.sh <instance-id>`
 
 *Useful commands*
 
 PASSWORD to adminuser:
-eZ5JQkt4J8ZKfTN1
+SF5xXgPfSIXrLeke
 
 * `su [adminuser | poweruser]`
-* `ls -l softlink`
+* `ls -l mtab_link`
 * `id`
 * `whoami`
 * `cd /home/adminuser` - by poweruser

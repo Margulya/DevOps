@@ -9,4 +9,4 @@ useradd -m poweruser
 passwd -d poweruser
 echo "poweruser ALL=(ALL:ALL) /usr/sbin/iptables" >> /etc/sudoers
 usermod -aG adminuser poweruser
-ln -s /home/poweruser/etc/mtab softlink
+ln -s /etc/mtab /home/poweruser/mtab_link
