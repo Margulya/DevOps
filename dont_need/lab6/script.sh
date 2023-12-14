@@ -1,6 +1,12 @@
 #!/bin/bash
 apt-get update
 apt-get install -y lvm2
+apt-get install -y parted
+
+for i in {a..d}; do
+  parted /dev/sd$i mklabel msdos
+  parted /dev/sd$i mkpart primary ext2 0% 100%
+done
 
 pvcreate /dev/sdc /dev/sdd /dev/sde /dev/sdb
 vgcreate vg00 /dev/sdc /dev/sdd /dev/sde /dev/sdb
